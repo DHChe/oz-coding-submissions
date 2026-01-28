@@ -1,0 +1,174 @@
+/* 전체적인 세팅 */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  background-color: #e8e8e8;
+}
+
+/* 프로필 라인 */
+.profile-bar {
+  background-color: #ffffff;
+  padding: 12px 20px;
+  height: 80px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-info {
+  float: left;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #667eea;
+  float: left;
+  margin-right: 10px;
+}
+
+.profile-details {
+  float: left;
+}
+
+.profile-name {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.profile-status {
+  font-size: 12px;
+  color: #4caf50;
+}
+
+.profile-actions {
+  float: right;
+  margin-top: 20px;
+}
+
+.member-count {
+  font-size: 13px;
+  color: #666;
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* 채팅 메시지 컨테이너 */
+.chat-container {
+  height: calc(100% - 200px);
+  background-color: #fafafa;
+  padding: 20px 16px;
+  overflow-y: auto;
+}
+
+.chat-messages {
+  clear: both;
+}
+
+.message {
+  margin-bottom: 16px;
+  max-width: 70%;
+}
+
+.message--received {
+  float: left;
+  clear: left;
+}
+
+.message--sent {
+  float: right;
+  clear: right;
+}
+
+.message-content {
+  padding: 10px 14px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.message--received .message-content {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.message--sent .message-content {
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+.message-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #999;
+  margin-top: 4px;
+  display: block;
+}
+
+/* 채팅 입력칸 */
+.chat-input-area {
+  height: 120px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 12px 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.chat-form {
+  height: 100%;
+}
+
+.chat-input {
+  float: left;
+  width: calc(100% - 120px);
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.send-button {
+  float: right;
+  width: 100px;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: #667eea;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #5568d3;
+}
+
+.send-button:active {
+  background-color: #4455b2;
+}

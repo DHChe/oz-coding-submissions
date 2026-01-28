@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>채팅방 리모델링</title>
+  <link href="chat-task.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- 프로필 라인 -->
+    <header class="profile-bar">
+      <div class="profile-info">
+        <div class="profile-avatar"></div>
+        <div class="profile-details">
+          <h3 class="profile-name">친구</h3>
+          <span class="profile-status">온라인</span>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <span class="member-count">2명</span>
+      </div>
+    </header>
+
+    <!-- 채팅 메시지 컨테이너 -->
+    <main class="chat-container">
+      <div class="chat-messages">
+        <div class="message message--received">
+          <div class="message-content">
+            <p>안녕하세요! 오늘 날씨가 정말 좋네요.</p>
+          </div>
+          <span class="message-time">오전 10:30</span>
+        </div>
+        <div class="message message--sent">
+          <div class="message-content">
+            <p>네, 맞아요! 산책하기 좋은 날씨예요.</p>
+          </div>
+          <span class="message-time">오전 10:32</span>
+        </div>
+        <div class="message message--received">
+          <div class="message-content">
+            <p>오늘 점심 같이 먹을까요?</p>
+          </div>
+          <span class="message-time">오전 10:35</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- 채팅 입력칸 -->
+    <footer class="chat-input-area">
+      <form class="chat-form">
+        <textarea class="chat-input" placeholder="메시지를 입력하세요..."></textarea>
+        <button type="submit" class="send-button">전송</button>
+      </form>
+    </footer>
+  </div>
+</body>
+</html>
