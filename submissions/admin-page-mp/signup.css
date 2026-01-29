@@ -1,0 +1,32 @@
+
+#signup-container {
+  max-width: 950px;
+  /* background-color: bisque; */
+  /* border-radius: 20px; */
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); */
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.col-md-8.col-lg-6 {
+  max-width: 800px; /* 원하는 크기로 조정 */
+  background-color: bisque;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.signup-form {
+  max-width: 100%;
+}
+
+
+.container {
+  padding: 0 15px;
+}
+
+
+h2 {
+  font-weight: 600;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title>Admin Page</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="container mt-3">
+    <h3 class="mt-5 mb-3">신규 등록 상품</h3>
+    <form class="row row-cols-lg-auto g-3 align-items-center">      
+      <div class="col-3">
+        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+        <select class="form-select" id="inlineFormSelectPref" name="category_data_table">
+          <!-- 셀렉트요소의 name="category_data_table"은 지우거나 변경하면 안돼요 -->
+          <!-- 카테고리 셀렉트 코드를 넣어주세요 -->
+          <option value="" disabled selected hidden>카테고리</option>
+          <option value="all">전체</option>
+          <option value="top">상의</option>
+          <option value="bottom">하의</option>
+          <option value="shoes">신발</option>
+          <option value="accessory">패션잡화</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <!-- 성별을 입력할 수 있는 셀렉터 추가-->
+         <select class="form-select" id="gender_select">
+          <option value="" disabled selected hidden>성별</option>
+          <option value="all">전체</option>
+          <option value="male">남성</option>
+          <option value="female">여성</option>
+         </select>
+      </div>
+      <div class="col-auto">
+        <!-- input 입력창 코드를 넣어주세요 -->
+        <input type="text" class="form-control" id="search_input" placeholder="제품명을 입력해주세요.">
+      </div>
+      <div class="col-auto">
+        <!-- 조회 버튼 코드를 넣어주세요 -->  
+        <button type="submit" class="btn btn-primary">조회</button>
+      </div>
+      <div class="col-auto ms-auto d-flex gap-2">
+        <!-- 회원가입 버튼 추가-->
+        <button type="button" class="btn btn-success">회원가입</button>
+        <!-- 다크모드 버튼 추가 -->  
+        <button type="button" class="btn btn-dark" id="darkModeButton" data-bs-theme-value="dark">다크모드</button>
+        <button type="button" class="btn btn-light" id="lightModeButton" data-bs-theme-value="light">라이트모드</button>
+      </div>
+
+    </form>
+
+    <div class="container mt-3">
+      <table class="table table-sm">
+        <thead>
+            <!-- 열의 속성값을 나타내는 코드를 작성해주세요 (예 : 카테고리, 브랜드, 상품명, 가격) -->
+          <tr>
+            <th>카테고리</th>
+            <th>성별</th>
+            <th>브랜드</th>
+            <th>상품명</th>
+            <th>가격</th>
+          </tr>
+        </thead>
+        <tbody id="product_data_Table">
+          <!-- tbody요소의 id="product_data_Table" 는 지우거나 변경하면 안돼요! -->
+          <!-- 제품 데이터가 여기 추가됩니다. -->
+        </tbody>
+      </table>
+    </div>
+    <!-- 페이지 네이션 코드를 넣어주세요 -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    // 제품 데이터
+    const product_data = [
+      { category: "상의", gender: '남성', brand: 'Supreme', product: '슈프림 박스로고 후드티', price: '390,000' },
+      { category: "하의", gender: '여성', brand: 'DIESEL', product: '디젤 트랙 팬츠', price: '188,000' },
+      { category: "신발", gender: '남성', brand: 'Nike', product: '에어포스 1', price: '137,000' },
+      { category: "패션잡화", gender: '여성', brand: 'Music&Goods', product: '빵빵이 키링', price: '29,000' },
+      { category: "신발", gender: '남성', brand: 'Nike', product: '에어포스 1', price: '137,000' },
+      { category: "패션잡화", gender: '여성', brand: 'Music&Goods', product: '빵빵이 키링', price: '29,000' },
+      // ...
+    ];
+
+    // 제품 테이블에 데이터 추가
+    const product_data_Table = document.getElementById('product_data_Table');
+
+    // 초기 데이터 로딩
+    product_data.forEach((item) => {
+      const row = product_data_Table.insertRow();
+      row.insertCell(0).innerHTML = item.category;
+      row.insertCell(1).innerHTML = item.gender;
+      row.insertCell(2).innerHTML = item.brand;
+      row.insertCell(3).innerHTML = item.product;
+      row.insertCell(4).innerHTML = item.price;
+    });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="admin-cho.js"></script>
+</body>
+</html>
